@@ -1,0 +1,100 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+  line-height: 1.7;
+}
+
+a { color: inherit; }
+
+/* ---------- Header ---------- */
+.header {
+  background: #1e293b;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.logo { color: #fff; font-weight: bold; font-size: 20px; text-decoration: none; }
+.nav a {
+  color: #cbd5e1;
+  margin-left: 24px;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+.nav a:hover { color: #38bdf8; }
+.nav a.active { color: #38bdf8; border-bottom: 2px solid #38bdf8; }
+
+/* ---------- Layout ---------- */
+main { max-width: 960px; margin: 32px auto; padding: 0 16px; min-height: 70vh; }
+
+.hero {
+  background: linear-gradient(135deg, #0ea5e9, #6366f1);
+  color: #fff;
+  padding: 64px 24px;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 40px;
+}
+.hero h1 { font-size: 36px; margin-bottom: 8px; }
+.hero p { font-size: 18px; opacity: 0.9; }
+
+.btn {
+  display: inline-block;
+  margin-top: 24px;
+  padding: 12px 24px;
+  background: #fff;
+  color: #0369a1;
+  font-weight: 600;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.15s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+.section-title { margin-bottom: 16px; font-size: 24px; }
+
+/* ---------- Cards ---------- */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.post-list .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.card h3 { margin: 8px 0 4px; }
+.card small { color: #64748b; display: block; margin-bottom: 8px; }
+.card p { color: #475569; margin-bottom: 12px; }
+
+.tag {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+}
+.read-more { color: #0ea5e9; text-decoration: none; font-weight: 600; }
+.read-more:hover { text-decoration: underline; }
+
+.detail { padding: 32px; }
+.detail h1 { margin: 12px 0 4px; }
+.detail p { margin-bottom: 16px; }
+
+/* ---------- Footer ---------- */
+.footer { text-align: center; padding: 24px; color: #64748b; }
